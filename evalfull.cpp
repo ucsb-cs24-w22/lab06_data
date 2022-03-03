@@ -26,7 +26,19 @@ bool balanced(char *expression[], int numTokens) {
                       // all of the same operations as the stack from
                       // Step 2 of this lab, but it won't get full
                       // and it can store any type - <char *> here
-
+    for(int i = 0; i < numTokens; i++) {
+        if (identify(expression[i] == LEFT) {
+            s.push(expression[i]);
+        } else {
+            if(s.empty()) {
+              return false;
+            }
+            s.pop();
+        }
+    }
+    if (s.empty()) {
+        return true;
+    }
     return false; // REPLACE THIS return WITH ACTUAL IMPLEMENTATION
 }
 
